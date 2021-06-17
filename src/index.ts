@@ -15,13 +15,13 @@ const recados: Array <any> = [];
 
 app.post('/recados', (request: Request, response: Response) => {
     const { descricao, detalhamento } = request.body;
-
+    
     const descricaoRecados = { 
         id: uuidGenerator(),
         descricao,
         detalhamento,
     }
-    
+
     recados.push(descricaoRecados);
         
     return response.json({
